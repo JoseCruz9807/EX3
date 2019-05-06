@@ -1,6 +1,7 @@
 const express = require('express')
+const cors = require('cors');
 const router = express.Router()
-
+router.all('*',cors())
 const users = require('./controllers/users.js')
 const todos = require('./controllers/todos.js')
 const auth = require('./middleware/auth')
